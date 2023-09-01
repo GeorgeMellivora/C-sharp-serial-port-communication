@@ -1,0 +1,22 @@
+C:\Users\M\Desktop\serial port\ComPort\bin\Debug\ComPort.exe.config
+C:\Users\M\Desktop\serial port\ComPort\bin\Debug\ComPort.exe
+C:\Users\M\Desktop\serial port\ComPort\bin\Debug\ComPort.pdb
+C:\Users\M\Desktop\serial port\ComPort\obj\Debug\ComPort.csproj.AssemblyReference.cache
+C:\Users\M\Desktop\serial port\ComPort\obj\Debug\ComPort.csproj.SuggestedBindingRedirects.cache
+C:\Users\M\Desktop\serial port\ComPort\obj\Debug\ComPort.Form1.resources
+C:\Users\M\Desktop\serial port\ComPort\obj\Debug\ComPort.Properties.Resources.resources
+C:\Users\M\Desktop\serial port\ComPort\obj\Debug\ComPort.csproj.GenerateResource.cache
+C:\Users\M\Desktop\serial port\ComPort\obj\Debug\ComPort.csproj.CoreCompileInputs.cache
+C:\Users\M\Desktop\serial port\ComPort\obj\Debug\ComPort.exe
+C:\Users\M\Desktop\serial port\ComPort\obj\Debug\ComPort.pdb
+C:\Git\C-sharp-serial-port-communication\ComPort\bin\Debug\ComPort.exe.config
+C:\Git\C-sharp-serial-port-communication\ComPort\bin\Debug\ComPort.exe
+C:\Git\C-sharp-serial-port-communication\ComPort\bin\Debug\ComPort.pdb
+C:\Git\C-sharp-serial-port-communication\ComPort\obj\Debug\ComPort.csproj.AssemblyReference.cache
+C:\Git\C-sharp-serial-port-communication\ComPort\obj\Debug\ComPort.csproj.SuggestedBindingRedirects.cache
+C:\Git\C-sharp-serial-port-communication\ComPort\obj\Debug\ComPort.Form1.resources
+C:\Git\C-sharp-serial-port-communication\ComPort\obj\Debug\ComPort.Properties.Resources.resources
+C:\Git\C-sharp-serial-port-communication\ComPort\obj\Debug\ComPort.csproj.GenerateResource.cache
+C:\Git\C-sharp-serial-port-communication\ComPort\obj\Debug\ComPort.csproj.CoreCompileInputs.cache
+C:\Git\C-sharp-serial-port-communication\ComPort\obj\Debug\ComPort.exe
+C:\Git\C-sharp-serial-port-communication\ComPort\obj\Debug\ComPort.pdb
