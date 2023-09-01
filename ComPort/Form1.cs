@@ -17,6 +17,7 @@ namespace ComPort
 
         string dataOut = "";
         string sendWith;
+        string dataIn;
         
         public Form1()
         {
@@ -37,6 +38,8 @@ namespace ComPort
             cboxWriteLine.Checked = true;
             cboxWrite.Checked = false;
             sendWith = "WriteLine";
+            cBoxAlwaysUpdate.Checked = true;
+            cBoxAddToOldData.Checked = false;
         }
 
         private void btnOpen_Click(object sender, EventArgs e)
@@ -167,7 +170,7 @@ namespace ComPort
         private void btnClr_Click(object sender, EventArgs e)
         {
             clickCount++;  // 每次按鈕點擊，計數器加一
-            tBoxDataOut.Text = "";
+            tBoxDataOut.Text = null;
         }
 
             private void btnEtr_Click(object sender, EventArgs e)
@@ -185,6 +188,7 @@ namespace ComPort
             if(cboxDtrEnable.Checked)
             {
                 serialPort1.DtrEnable = true;
+                MessageBox.Show("DTR Enable", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -197,6 +201,7 @@ namespace ComPort
             if(cboxRtsEnable.Checked)
             {
                 serialPort1.RtsEnable= true;
+                MessageBox.Show("Rts Enable", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -275,6 +280,67 @@ namespace ComPort
             {
                 sendWith = "Write";
                 cboxWriteLine.Checked = false;
+            }
+        }
+
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            dataIn = serialPort1.ReadExisting();
+            this.Invoke(new EventHandler(showData));
+        }
+
+        private void showData(object sender, EventArgs e)
+        {
+            int dataInLength = tBoxDataIn.Text.Length;
+            lblDataInLength.Text = string.Format("{0:0}", dataInLength);
+
+            if(cBoxAlwaysUpdate.Checked)
+            {
+                tBoxDataIn.Text = dataIn;
+            }
+            else if(cBoxAddToOldData.Checked)
+            {
+                tBoxDataIn.Text += dataIn;
+            }
+        }
+
+        private void cBoxAlwaysUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cBoxAlwaysUpdate.Checked)
+            {
+                cBoxAlwaysUpdate.Checked = true;
+                cBoxAddToOldData.Checked = false;
+            }
+            else
+            {
+                cBoxAlwaysUpdate.Checked = false;
+                cBoxAddToOldData.Checked = true;
+            }
+        }
+
+        private void cBoxAddToOldData_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cBoxAddToOldData.Checked)
+            {
+                cBoxAddToOldData.Checked = true;
+                cBoxAlwaysUpdate.Checked = false;
+            }
+            else
+            {
+                cBoxAddToOldData.Checked = false;
+                cBoxAlwaysUpdate.Checked = true;
+            }
+        }
+
+        private void btnClearDataIn_Click(object sender, EventArgs e)
+        {
+            if(tBoxDataIn.Text != "" && tBoxDataIn.Text != null)
+            {
+                tBoxDataIn.Text = null;
+            }
+            else
+            {
+                MessageBox.Show("No Data Exist");
             }
         }
     }
