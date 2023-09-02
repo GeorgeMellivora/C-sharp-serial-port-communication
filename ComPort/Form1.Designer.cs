@@ -72,12 +72,11 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.cboxWrite = new System.Windows.Forms.CheckBox();
             this.cboxWriteLine = new System.Windows.Forms.CheckBox();
+            this.btnClearDataOut = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.cboxUsingEnter = new System.Windows.Forms.CheckBox();
             this.cboxUsingButton = new System.Windows.Forms.CheckBox();
-            this.btnClearDataOut = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.tBoxDataIn = new System.Windows.Forms.TextBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.lblDataInLength = new System.Windows.Forms.Label();
@@ -86,6 +85,7 @@
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.cBoxAddToOldData = new System.Windows.Forms.CheckBox();
             this.cBoxAlwaysUpdate = new System.Windows.Forms.CheckBox();
+            this.tBoxDataIn = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -391,6 +391,7 @@
             this.tBoxDataOut.Size = new System.Drawing.Size(321, 316);
             this.tBoxDataOut.TabIndex = 2;
             this.tBoxDataOut.TextChanged += new System.EventHandler(this.tBoxDataOut_TextChanged);
+            this.tBoxDataOut.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tBoxDataOut_KeyDown);
             // 
             // progressBar1
             // 
@@ -561,6 +562,16 @@
             this.cboxWriteLine.UseVisualStyleBackColor = true;
             this.cboxWriteLine.CheckedChanged += new System.EventHandler(this.cboxWriteLine_CheckedChanged);
             // 
+            // btnClearDataOut
+            // 
+            this.btnClearDataOut.Location = new System.Drawing.Point(6, 91);
+            this.btnClearDataOut.Name = "btnClearDataOut";
+            this.btnClearDataOut.Size = new System.Drawing.Size(83, 45);
+            this.btnClearDataOut.TabIndex = 4;
+            this.btnClearDataOut.Text = "Clear Data Out";
+            this.btnClearDataOut.UseVisualStyleBackColor = true;
+            this.btnClearDataOut.Click += new System.EventHandler(this.btnClearDataOut_Click);
+            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.cboxUsingEnter);
@@ -580,7 +591,7 @@
             this.cboxUsingEnter.TabIndex = 1;
             this.cboxUsingEnter.Text = "Using Enter";
             this.cboxUsingEnter.UseVisualStyleBackColor = true;
-            this.cboxUsingEnter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cboxUsingEnter_KeyDown);
+            this.cboxUsingEnter.CheckedChanged += new System.EventHandler(this.cboxUsingEnter_CheckedChanged);
             // 
             // cboxUsingButton
             // 
@@ -593,16 +604,6 @@
             this.cboxUsingButton.UseVisualStyleBackColor = true;
             this.cboxUsingButton.CheckedChanged += new System.EventHandler(this.cboxUsingButton_CheckedChanged);
             // 
-            // btnClearDataOut
-            // 
-            this.btnClearDataOut.Location = new System.Drawing.Point(6, 91);
-            this.btnClearDataOut.Name = "btnClearDataOut";
-            this.btnClearDataOut.Size = new System.Drawing.Size(83, 45);
-            this.btnClearDataOut.TabIndex = 4;
-            this.btnClearDataOut.Text = "Clear Data Out";
-            this.btnClearDataOut.UseVisualStyleBackColor = true;
-            this.btnClearDataOut.Click += new System.EventHandler(this.btnClearDataOut_Click);
-            // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.groupBox11);
@@ -613,14 +614,6 @@
             this.groupBox10.TabIndex = 28;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Receiver Controler";
-            // 
-            // tBoxDataIn
-            // 
-            this.tBoxDataIn.Location = new System.Drawing.Point(6, 24);
-            this.tBoxDataIn.Multiline = true;
-            this.tBoxDataIn.Name = "tBoxDataIn";
-            this.tBoxDataIn.Size = new System.Drawing.Size(321, 316);
-            this.tBoxDataIn.TabIndex = 0;
             // 
             // groupBox11
             // 
@@ -702,6 +695,14 @@
             this.cBoxAlwaysUpdate.Text = "Always Update";
             this.cBoxAlwaysUpdate.UseVisualStyleBackColor = true;
             this.cBoxAlwaysUpdate.CheckedChanged += new System.EventHandler(this.cBoxAlwaysUpdate_CheckedChanged);
+            // 
+            // tBoxDataIn
+            // 
+            this.tBoxDataIn.Location = new System.Drawing.Point(6, 24);
+            this.tBoxDataIn.Multiline = true;
+            this.tBoxDataIn.Name = "tBoxDataIn";
+            this.tBoxDataIn.Size = new System.Drawing.Size(321, 316);
+            this.tBoxDataIn.TabIndex = 0;
             // 
             // Form1
             // 

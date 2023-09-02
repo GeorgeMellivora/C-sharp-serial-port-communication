@@ -177,10 +177,10 @@ namespace ComPort
             {
                 clickCount++;  // 每次按鈕點擊，計數器加一
                 tBoxDataOut.Text += Environment.NewLine;
-                if(cboxUsingEnter.Checked)
+                /*if(cboxUsingEnter.Checked)
                 {
                     SendKeys.Send("{ENTER}");
-                }
+                }*/
             }
 
         private void cboxDtrEnable_CheckedChanged(object sender, EventArgs e)
@@ -243,11 +243,19 @@ namespace ComPort
             }
         }
 
-        private void cboxUsingEnter_KeyDown(object sender, KeyEventArgs e)
+        private void cboxUsingEnter_CheckedChanged(object sender, EventArgs e)
         {
             if(cboxUsingEnter.Checked)
             {
-                if(e.KeyCode == Keys.Enter)
+                MessageBox.Show("The Enter only from keyboard", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void tBoxDataOut_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (cboxUsingEnter.Checked)
+            {
+                if (e.KeyCode == Keys.Enter)
                 {
                     if (serialPort1.IsOpen)
                     {
