@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComPort", "ComPort.csproj", "{1CF49F36-259B-42E9-BBF6-931DD1F4DEAE}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Serial Communication", "..\Serial Communication\Serial Communication.vdproj", "{9EC7BEBC-BF38-44CC-8B27-38F761C9D893}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{1CF49F36-259B-42E9-BBF6-931DD1F4DEAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CF49F36-259B-42E9-BBF6-931DD1F4DEAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CF49F36-259B-42E9-BBF6-931DD1F4DEAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EC7BEBC-BF38-44CC-8B27-38F761C9D893}.Debug|Any CPU.ActiveCfg = Debug
+		{9EC7BEBC-BF38-44CC-8B27-38F761C9D893}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
